@@ -1,0 +1,25 @@
+:root {
+    --top-offset: 10vh;
+    --primary: #FF6600;
+    --secondary: #4CAF50;
+    --alert: #FFC107;
+    --notify: #8E24AA;
+    --bleu: #2196F3; 
+
+    --bg: #C7C7C7;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: var(--top-offset);
+
+    background-color: var(--bg);
+}
+
+body {
+    position: relative;
+    top: var(--top-offset);
+}
