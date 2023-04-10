@@ -10,13 +10,51 @@
 }
 
 header {
+    --padding-offset: 2.5rem;
+
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: calc(100vw - 2 * var(--padding-offset));
     height: var(--top-offset);
 
     background-color: var(--bg);
+
+    padding-left: var(--padding-offset);
+    padding-right: var(--padding-offset);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+}
+header > div:first-child,
+header > div:last-child
+{
+    min-width: 20%;
+}
+
+.logo
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main-nav
+{
+    width: fit-content;
+    height: 100%;
+    margin: 0;
+
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: row;
+    gap: 1.525rem;
+
+    list-style-type: none;
 }
 
 body {
