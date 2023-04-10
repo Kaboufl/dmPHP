@@ -6,7 +6,15 @@
     --notify: #8E24AA;
     --bleu: #2196F3; 
 
+    --rouge-logo: #CA3433;
+
     --bg: #C7C7C7;
+}
+
+html
+{
+    margin: 0;
+    padding: 0;
 }
 
 header {
@@ -17,6 +25,7 @@ header {
     left: 0;
     width: calc(100vw - 2 * var(--padding-offset));
     height: var(--top-offset);
+    min-height: var(--top-offset);
 
     background-color: var(--bg);
 
@@ -27,6 +36,8 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: stretch;
+
+    z-index: 10;
 }
 header > div:first-child,
 header > div:last-child
@@ -60,4 +71,10 @@ header > div:last-child
 body {
     position: relative;
     top: var(--top-offset);
+
+    height: calc(100vh - var(--top-offset));
+
+    margin: 0;
+    padding: 0;
+    
 }
