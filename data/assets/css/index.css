@@ -66,14 +66,52 @@ section {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+
+    gap: 1.125rem;
 }
 
 .cardSample
 {
-    padding: 1.725rem;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    
+    padding: 0;
 
     background-color: var(--bg);
     border-radius: 0.75rem;
 
     font-family: 'Raleway', 'sans-serif';
+
+    overflow: hidden;
 }
+
+.cardSample div:first-child
+{
+    position: relative;
+
+    height: 100%;
+    width: 30%;
+
+}
+
+.cardSample div:last-child
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+
+    height: 100%;
+    width: 70%;
+
+    padding: 0.725rem;
+
+}
+
+.cardSample div:last-child > h1,
+.cardSample div:last-child > p
+{
+    margin: 0;
+}
+

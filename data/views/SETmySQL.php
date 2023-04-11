@@ -12,6 +12,7 @@ $table = $mysqli->query("CREATE TABLE `db-MamaMia`.`recipe` (
                                                 `description` VARCHAR(255) NULL,
                                                 `category_id` INT NULL,
                                                 `steps` LONGTEXT NULL,
+                                                `ingredients` LONGTEXT NULL,
                                                 `duration` INT NULL,
                                                 `imgURL` VARCHAR(255) NULL,
                                                 PRIMARY KEY (`id`),
