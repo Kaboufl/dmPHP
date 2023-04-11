@@ -32,6 +32,8 @@ services:
       MYSQL_DATABASE: db-MamaMia
       MYSQL_USER: myuser
       MYSQL_PASSWORD: monpassword
+    volumes:
+      - DBSTATE:/var/lib/mysql
     ports:
       - 3306:3306
     networks:
@@ -40,3 +42,6 @@ services:
 networks:
   internal:
     driver: bridge
+
+volumes:
+  DBSTATE:

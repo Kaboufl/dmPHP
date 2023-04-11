@@ -26,6 +26,12 @@ switch ($request) {
     case '/checkSQL' :
         require __DIR__ . '/views/mySQL.php';
         break;
+    case '/setSQL' :
+        require __DIR__ . '/views/SETmySQL.php';
+        break;
+    case '/insertSQL' :
+        require __DIR__ . '/views/insertRecipe.php';
+        break;
     default:
         http_response_code(404);
         require __DIR__ . '/views/404.php';
