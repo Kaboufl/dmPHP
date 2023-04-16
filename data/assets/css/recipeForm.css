@@ -1,0 +1,68 @@
+.form-card
+{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: fit-content;
+    min-height: 80vh;
+    background-color: #651b19;
+
+    margin-top: 1.226rem;
+
+    color: white;
+    font-weight: bold;
+    font-family: 'Raleway', 'sans-serif';
+
+    border-radius: 15px;
+}
+.form-card h1
+{
+    text-align: center;
+}
+
+.form-card form
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 1.5rem;
+    
+    padding: 2rem;
+    padding-left: 20%;
+    padding-right: 20%;
+
+}
+
+.form-card form input
+{
+    height: fit-content;
+    
+    padding: 12px;
+    border-radius: 12px;
+    
+    font-family: 'Raleway', 'Arial Narrow Bold', sans-serif;
+    font-size: 17px;
+    
+}
+.form-card form textarea
+{
+    padding: 12px;
+    border-radius: 12px;
+    
+    font-family: 'Raleway', 'Arial Narrow Bold', sans-serif;
+    font-size: 17px;
+
+}
+
+.form-card form #steps
+{
+    grid-column-start: 2;
+    display: flex;
+    flex-direction: row;
+}
+.form-card form #addedSteps
+{
+    grid-column-start: 2;
+    display: flex;
+    flex-direction: column;
+}

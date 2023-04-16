@@ -31,6 +31,13 @@ switch ($request) {
         include(__DIR__ . '/layout.php');
         break;
 
+    case '/addRecipe':
+        $title = 'Ajouter sa recette';
+        $childView = __DIR__ . '/views/addRecipe.php';
+
+        include(__DIR__ . '/layout.php');
+        break;
+
     case '/about' :
         require __DIR__ . '/views/about.php';
         break;

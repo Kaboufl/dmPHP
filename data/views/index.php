@@ -4,6 +4,7 @@
             <h1>Les meilleures recettes d'Internet</h1>
             <p>À portée de clic !</p>
             <a href="/discover">Découvrir</a>
+            <a href="/addRecipe">Ajoutez la vôtre !</a>
         </div>
     </div>
     <div class="recipeSampleWrapper">
