@@ -45,15 +45,17 @@ $mysqli->close();
 
     foreach($recettes as $recette)
     {
-
+        $id = $recette['id'];
         $nom = $recette['name'];
         $desc = $recette['description'];
         $duration = intval($recette['duration']) / 60 . ' min';
         $difficulty = intval($recette['category_id']);
 
 
+
         echo '
-            <tr onclick="window.alert()">
+            <tr class="table-separator"></tr>
+            <tr onclick="window.location=\'/recipes/',$id,'\';">
                 <td>',$nom,'</td>
                 <td>',$desc,'</td>
                 <td>',$duration,'</td>

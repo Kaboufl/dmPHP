@@ -24,6 +24,13 @@ switch ($request) {
         include(__DIR__ .'/layout.php');
         break;
         
+    case str_starts_with($request, '/recipe'):
+        $title = 'Recette';
+        $childView = __DIR__ . '/views/recipePage.php';
+
+        include(__DIR__ . '/layout.php');
+        break;
+
     case '/about' :
         require __DIR__ . '/views/about.php';
         break;
