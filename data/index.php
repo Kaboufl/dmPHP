@@ -4,6 +4,9 @@
 $request = $_SERVER['REQUEST_URI'];
 
 switch ($request) {
+    // case '/URL' :
+    //     require __DIR__ . '/path/vers/html';
+    //     break;
     case '/' :
         $title = 'MamaMia';
         $childView = __DIR__ . '/views/index.php';
@@ -14,20 +17,18 @@ switch ($request) {
         $childView = __DIR__ . '/views/index.php';
         include(__DIR__ . '/layout.php');
         break;
-    // case '/' :
-    //     require __DIR__ . '/views/index.php';
-    //     break;
-    // case '' :
-    //     require __DIR__ . '/views/mySQL.php';
-    //     break;
+
+    case '/discover' :
+        $title = 'MamaMia | Nos recettes';
+        $childView = __DIR__ . '/views/discover.php';
+        include(__DIR__ .'/layout.php');
+        break;
+        
     case '/about' :
         require __DIR__ . '/views/about.php';
         break;
     case '/checkSQL' :
         require __DIR__ . '/views/mySQL.php';
-        break;
-    case '/setSQL' :
-        require __DIR__ . '/views/SETmySQL.php';
         break;
     case '/insertSQL' :
         require __DIR__ . '/views/insertRecipe.php';

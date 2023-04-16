@@ -1,0 +1,111 @@
+.discover-banner
+{
+    position: relative;
+    width: 100%;
+    height: 250px;
+    background-color: black;
+
+    color: white;
+    font-weight: bold;
+    font-family: 'Raleway', 'sans-serif';
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    border-radius: 15px;
+}
+.discover-banner::before
+{
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0.6;
+    width: 100%;
+    height: 100%;
+    background-color: var(--rouge-logo);
+    border-radius: 15px;
+
+}
+
+.discover-banner div
+{
+    height: fit-content;
+    width: 40%;
+
+    z-index: 2;
+}
+
+.discover-banner a
+{
+    background-color: var(--rouge-logo);
+    padding: 0.725rem;
+    border-radius: 5rem;
+
+    text-decoration: none;
+    color: var(--bg);
+}
+
+
+
+.discover-body
+{
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    min-height: 40vh;
+    background-color: black;
+
+    margin-top: 1.226rem;
+
+    color: white;
+    font-weight: bold;
+    font-family: 'Raleway', 'sans-serif';
+
+    border-radius: 15px;
+}
+.discover-body::before
+{
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0.75;
+    width: 100%;
+    height: 100%;
+    background-color: var(--rouge-logo);
+    border-radius: 15px;
+
+}
+
+.discover-body table
+{
+    z-index: 5;
+
+    margin: auto;
+    width: 75%;
+    border-style: none;
+    border-spacing: 0;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 12px;
+    border: 2px solid rgb(71, 71, 71);
+    cursor: pointer;
+}
+
+.discover-body tr th{
+    background-color: rgb(92, 92, 92);
+    padding: 10px;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+
+.discover-body tr td{
+    padding: 9px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}

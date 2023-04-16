@@ -1,12 +1,13 @@
-<div class="logo">
+<div class="logo" id="homeBtn">
     <img src="images/brand/svg/logo-no-background.svg" height="65%" alt="">
 </div>
-<div>
-    <ul class="main-nav">
-        <li>À la une</li>
-        <li>Catégories</li>
-        <li>Nouveautés</li>
-    </ul>
-</div>
-<div>Titre</div>
+
+<script>
+    homeButton = document.querySelector('#homeBtn');
+
+    homeButton.addEventListener('click', () => {
+        window.location.href = '/';
+    });
+</script>
+
 

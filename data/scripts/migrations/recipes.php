@@ -7,7 +7,7 @@ $db = 'db-MamaMia';
 $mysqli = new mysqli($host, $user, $password, $db);
 
 $table = $mysqli->query("CREATE TABLE `db-MamaMia`.`recipe` (
-                                                `id` INT NOT NULL,
+                                                `id` INT NOT NULL AUTO_INCREMENT,
                                                 `name` VARCHAR(45) NULL,
                                                 `description` VARCHAR(255) NULL,
                                                 `category_id` INT NULL,

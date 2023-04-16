@@ -3,7 +3,7 @@
         <div>
             <h1>Les meilleures recettes d'Internet</h1>
             <p>À portée de clic !</p>
-            <a href="/">Découvrir</a>
+            <a href="/discover">Découvrir</a>
         </div>
     </div>
     <div class="recipeSampleWrapper">
@@ -16,10 +16,11 @@
             foreach ($samples as $sample) {
                 $name = $sample['name'];
                 $description = $sample['description'];
+                $imgURL = $sample['imgURL'];
                 // var_dump($sample);
                 echo '<div class="cardSample">
                         <div>
-                            <img src="" alt="">
+                            <img src="',$imgURL,'" alt="" width="100%">
                         </div>
                         <div>
                             <h1>', $name, '</h1>
@@ -28,6 +29,8 @@
                     </div>';
 
             }
+
+            $mysqli->close();
         ?>
 
         
