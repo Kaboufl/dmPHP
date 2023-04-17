@@ -1,9 +1,6 @@
 <?php
 
-if (!(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true))
-{
-    header('Location: /');
-}   
+ 
 ?>
 <section>
     <div class="form-card">
