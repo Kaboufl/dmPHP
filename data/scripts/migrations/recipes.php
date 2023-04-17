@@ -8,6 +8,7 @@ $mysqli = new mysqli($host, $user, $password, $db);
 
 $table = $mysqli->query("CREATE TABLE `db-MamaMia`.`recipe` (
                                                 `id` INT NOT NULL AUTO_INCREMENT,
+                                                `id_user` INT NULL,
                                                 `name` VARCHAR(45) NULL,
                                                 `description` VARCHAR(255) NULL,
                                                 `category_id` INT NULL,

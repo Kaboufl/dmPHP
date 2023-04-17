@@ -7,12 +7,17 @@ $recipes = [
 ];
 
 
+
+
 function writeRecipes($recipes) {
 
     $mysqli = new mysqli('mysql8', 'myuser', 'monpassword', 'db-MamaMia');
 
+    $mysqli->query("TRUNCATE TABLE `db-MamaMia`.recipe");
+
     foreach($recipes as $recipe) {
         
+        $id_user = 0;
         $name = $mysqli->real_escape_string($recipe[0]);
         $description = $mysqli->real_escape_string($recipe[1]);
         $category_id = $mysqli->real_escape_string(intval($recipe[2]));
@@ -24,8 +29,8 @@ function writeRecipes($recipes) {
         
         // $mysqli->real_escape_string();
 
-        $mysqli->query("INSERT INTO `db-MamaMia`.`recipe` (`name`, `description`, `category_id`, `steps`, `ingredients`, `duration`, `imgURL`) 
-                        VALUES ('".$name."', '".$description."', '".$category_id."', '".$steps."', '".$ingredients."', '".$duration."', '".$imgURL."');");
+        $mysqli->query("INSERT INTO `db-MamaMia`.`recipe` (`id_user`, `name`, `description`, `category_id`, `steps`, `ingredients`, `duration`, `imgURL`) 
+                        VALUES ('".$id_user."', '".$name."', '".$description."', '".$category_id."', '".$steps."', '".$ingredients."', '".$duration."', '".$imgURL."');");
     }
 
     $mysqli->close();

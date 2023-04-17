@@ -54,7 +54,7 @@
 .discover-body
 {
     position: relative;
-    width: max-content;
+    width: auto;
     height: fit-content;
     min-height: 40vh;
     background-color: #982726;

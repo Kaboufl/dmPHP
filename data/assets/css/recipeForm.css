@@ -22,15 +22,17 @@
 
 .form-card form
 {
+    width: fit-content;
+
+    margin-left: auto;
+    margin-right: auto;
+
     display: grid;
     grid-template-columns: 1fr 1fr;
 
     gap: 1.5rem;
     
     padding: 2rem;
-    padding-left: 20%;
-    padding-right: 20%;
-
 }
 
 .form-card form input
@@ -52,6 +54,8 @@
     font-family: 'Raleway', 'Arial Narrow Bold', sans-serif;
     font-size: 17px;
 
+    flex-grow: 2;
+
 }
 
 .form-card form #steps
@@ -60,9 +64,75 @@
     display: flex;
     flex-direction: row;
 }
+.form-card form #steps button
+{
+    background-color: var(--rouge-logo);
+    padding: 0.725rem;
+    border-radius: 5rem;
+
+    text-decoration: none;
+    color: var(--bg);
+
+    font-weight: bold;
+    font-family: 'Raleway', 'sans-serif';
+
+    cursor: pointer;
+}
 .form-card form #addedSteps
 {
     grid-column-start: 2;
     display: flex;
     flex-direction: column;
 }
+.form-card form #ingredients
+{
+    grid-column-start: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+.form-card form #ingredients button
+{
+    background-color: var(--rouge-logo);
+    padding: 0.725rem;
+    border-radius: 5rem;
+
+    text-decoration: none;
+    color: var(--bg);
+
+    font-weight: bold;
+    font-family: 'Raleway', 'sans-serif';
+
+    cursor: pointer;
+}
+.form-card form #addedIngredients
+{
+    grid-column-start: 1;
+    grid-row-start: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-card form .flex-row-center
+{
+    grid-column-start: span 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.form-card form .flex-row-center button
+{
+    background-color: var(--rouge-logo);
+    padding: 0.725rem;
+    border-radius: 5rem;
+
+    text-decoration: none;
+    color: var(--bg);
+
+    font-weight: bold;
+    font-family: 'Raleway', 'sans-serif';
+
+    cursor: pointer;
+}
+

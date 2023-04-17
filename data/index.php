@@ -38,6 +38,13 @@ switch ($request) {
         include(__DIR__ . '/layout.php');
         break;
 
+    case '/post-recipe':
+        header("Location: http://".$_SERVER['HTTP_HOST']."/discover");
+        include(__DIR__ . '/views/postRecipe.php');
+        die();
+        
+        break;
+
     case '/about' :
         require __DIR__ . '/views/about.php';
         break;
