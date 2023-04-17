@@ -23,7 +23,7 @@ $mysqli->close();
         <div>
             <h1>Découvrez notre sélection de recettes !</h1>
         
-            <a href="/discover">Bouton</a>
+            <a href="/addRecipe">Ajoutez la vôtre !</a>
         </div>
     </div>
 
@@ -41,7 +41,7 @@ $mysqli->close();
 <?php
 
 
-    var_dump($columns);
+    //var_dump($columns);
 
     foreach($recettes as $recette)
     {

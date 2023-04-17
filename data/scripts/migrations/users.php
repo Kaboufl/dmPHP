@@ -6,13 +6,13 @@ $db = 'db-MamaMia';
 
 $mysqli = new mysqli($host, $user, $password, $db);
 
+
 $table = $mysqli->query("CREATE TABLE `db-MamaMia`.`users` (
-                                                    `id` INT NOT NULL AUTO_INCREMENT,
-                                                    `name` VARCHAR(50),
+                                                    `id` INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+                                                    `username` VARCHAR(50),
                                                     `password` VARCHAR(255),
-                                                    PRIMARY KEY (id)
-                                                    );"
-        );
+                                                    `created_at` DATETIME DEFAULT CURRENT_TIMESTAMP
+                                                    );");
 
 
 try {

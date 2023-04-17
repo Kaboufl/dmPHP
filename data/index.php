@@ -1,6 +1,9 @@
 <?php
 //phpinfo();
 
+session_start();
+
+
 $request = $_SERVER['REQUEST_URI'];
 
 switch ($request) {
@@ -35,6 +38,12 @@ switch ($request) {
         $title = 'Ajouter sa recette';
         $childView = __DIR__ . '/views/addRecipe.php';
 
+        if (!(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true))
+        {
+            header('Location: /');
+            break;
+        }  
+
         include(__DIR__ . '/layout.php');
         break;
 
@@ -43,6 +52,13 @@ switch ($request) {
         include(__DIR__ . '/views/postRecipe.php');
         die();
         
+        break;
+
+    case '/login':
+        include(__DIR__ . '/views/login.php');
+        break;
+    case '/logout':
+        include(__DIR__ . '/views/logout.php');
         break;
 
     case '/about' :
@@ -59,3 +75,5 @@ switch ($request) {
         require __DIR__ . '/views/404.php';
         break;
 }
+
+//session_destroy();

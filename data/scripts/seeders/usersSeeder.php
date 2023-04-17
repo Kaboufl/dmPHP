@@ -1,7 +1,7 @@
 <?php
 
 $users = [
-    ['admin', 'mamamia!!'],
+    ['admin', 'admin'],
     ['standardUser', 'password']
 ];
 
@@ -18,7 +18,7 @@ function writeUsers($users) {
         $safeUsername = $mysqli->real_escape_string($username);
         $safePassword = $mysqli->real_escape_string(password_hash($password, PASSWORD_DEFAULT));
 
-        $mysqli->query("INSERT INTO `db-MamaMia`.`users` (`name`, `password`) VALUES ('".$safeUsername."', '".$safePassword."');");
+        $mysqli->query("INSERT INTO `db-MamaMia`.`users` (`username`, `password`) VALUES ('".$safeUsername."', '".$safePassword."');");
     }
 
     $mysqli->close();

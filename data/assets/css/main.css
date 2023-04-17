@@ -57,6 +57,33 @@ header > div:last-child
     cursor: pointer;
 }
 
+.loginWrapper
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    margin-right: 2rem;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    justify-content: center;
+}
+.loginWrapper a
+{
+    background-color: var(--rouge-logo);
+    padding: 0.725rem;
+    border-radius: 5rem;
+
+    text-decoration: none;
+    color: var(--bg);
+
+    font-family: 'Raleway';
+}
+
 .main-nav
 {
     width: fit-content;
