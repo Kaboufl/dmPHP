@@ -40,7 +40,7 @@ switch ($request) {
 
         if (!(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true))
         {
-            header('Location: /');
+            header('Location: /login');
             break;
         }  
 
@@ -51,7 +51,16 @@ switch ($request) {
         header("Location: http://".$_SERVER['HTTP_HOST']."/discover");
         include(__DIR__ . '/views/postRecipe.php');
         die();
-        
+        break;
+
+    case '/post-comment':
+        include(__DIR__ . '/views/addComment.php');
+        break;
+
+    case '/register':
+        $title = 'Créer son compte';
+        $childView = __DIR__ . '/views/register.php';
+        include(__DIR__ . '/layout.php');
         break;
 
     case '/login':

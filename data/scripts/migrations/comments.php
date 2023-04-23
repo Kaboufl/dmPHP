@@ -7,11 +7,11 @@ $db = 'db-MamaMia';
 $mysqli = new mysqli($host, $user, $password, $db);
 
 
-$table = $mysqli->query("CREATE TABLE `db-MamaMia`.`users` (
+$table = $mysqli->query("CREATE TABLE `db-MamaMia`.`comments` (
                                                     `id` INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-                                                    `username` VARCHAR(50),
-                                                    `email` VARCHAR(50),
-                                                    `password` VARCHAR(255),
+                                                    `id_user` INT NOT NULL,
+                                                    `recipe_id` INT NOT NULL,
+                                                    `content` TEXT,
                                                     `created_at` DATETIME DEFAULT CURRENT_TIMESTAMP
                                                     );");
 

@@ -111,3 +111,52 @@
     gap: 1.85rem;
 }
 
+.comments-body
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    height: fit-content;
+    min-height: 80vh;
+    background-color: #651b19;
+    box-sizing: border-box;
+    width: 100%;
+
+    padding: 2rem;
+
+    margin-top: 1.226rem;
+
+    color: white;
+    font-weight: bold;
+    font-family: 'Raleway', 'sans-serif';
+
+    border-radius: 15px;
+}
+
+.comments-body h1
+{
+    font-size: 1.625rem;
+}
+
+.comment-item
+{
+    padding: 1.85rem;
+    padding-left: 2.465rem;
+
+    background-color: var(--bg);
+    border-radius: 1.5rem;
+}
+.comment-item h3,
+.add-comment h3
+{
+    margin: 0;
+    margin-left: 0.5rem;
+
+}
+
+.add-comment
+{
+    padding: 1.25rem;
+}
+

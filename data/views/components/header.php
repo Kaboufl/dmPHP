@@ -10,6 +10,7 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true)
 } else {
     $message = '<div class="loginWrapper">
     <a href="/login">Se connecter</a>
+    <a href="/register">S\'inscrire</a>
     </div>';
 }
 

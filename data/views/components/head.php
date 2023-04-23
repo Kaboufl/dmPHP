@@ -12,3 +12,4 @@
 <link rel="stylesheet" href="/css/discover.css">
 <link rel="stylesheet" href="/css/recipe.css">
 <link rel="stylesheet" href="/css/recipeForm.css">
+<link rel="stylesheet" href="/css/register.css">
