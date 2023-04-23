@@ -28,6 +28,57 @@
 
             </ul>
 
+            <div id="difficulty">
+                <h3>Choisissez la difficulté</h3>
+                <div>
+                    <div>
+                        <input id="diff1" type="radio" name="difficulty" value="1">
+                        <label for="diff1">1</label>
+                    </div>
+                    <div>
+                        <input id="diff2" type="radio" name="difficulty" value="2">
+                        <label for="diff2">2</label>
+                    </div>
+                    <div>
+                        <input id="diff3" type="radio" name="difficulty" value="3">
+                        <label for="diff3">3</label>
+                    </div>
+                    <div>
+                        <input id="diff4" type="radio" name="difficulty" value="4">
+                        <label for="diff4">4</label>
+                    </div>
+                    <div>
+                        <input id="diff5" type="radio" name="difficulty" value="5">
+                        <label for="diff5">5</label>
+                    </div>
+                </div>
+            </div>
+
+            <div id="category">
+                <h3>Choisissez la catégorie</h3>
+                <select name="category" id="category">
+                    <option value="Entrée">Entrée</option>
+                    <option value="Plat">Plat</option>
+                    <option value="Dessert">Dessert</option>
+                </select>
+            </div>
+
+            <div id="duration">
+                <h3>Combien de temps pour préparer cette recette ?</h3>
+                <div>
+                    <input name="duration" type="number" id="duration-span">
+                    <label for="duration-span">Durée (en minutes)</label>
+                </div>
+            </div>
+
+            <div id="image">
+                <h3>Ajoutez une image de votre plat</h3>
+                <div>
+                    <input name="imgURL" id="imgURL" type="text">
+                    <label for="imgURL">Ajoutez le lien de votre image</label>
+                </div>
+            </div>
+
             <div class="flex-row-center">
                 <button type="submit">Enregistrer la recette</button>
             </div>

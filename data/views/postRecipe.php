@@ -8,16 +8,27 @@
 
     $titre = $mysqli->real_escape_string($post['titre']);
     $desc = $mysqli->real_escape_string($post['description']);
-    $category_id = 4;
+    $difficulty = intval($post['difficulty']);
+    $category = $mysqli->real_escape_string($post['category']);
     $steps = $mysqli->real_escape_string($post['steps']);
     $ingredients = $mysqli->real_escape_string($post['ingredients']);
-    $duration = $mysqli->real_escape_string(120);
-    $imgURL = $mysqli->real_escape_string('');
+    $duration = intval($post['duration']) * 60;
+    $imgURL = $mysqli->real_escape_string($post['imgURL']);
 
-    $mysqli->query("INSERT INTO `db-MamaMia`.recipe(name, description, category_id, steps, ingredients, duration, imgURL)
-                                VALUES ('".$titre."', '".$desc."', '".$category_id."', '".$steps."', '".$ingredients."', '".$duration."', '".$imgURL."');");
+    $sql = "INSERT INTO `db-MamaMia`.recipe(name, description, difficulty, category, steps, ingredients, duration, imgURL)
+                                VALUES (?, ?, ?, ?, ?, ?, ?, ?);";
+
+    if ($stmt = $mysqli->prepare($sql)) {
+        $stmt->bind_param("ssisssis", $titre, $desc, $difficulty, $category, $steps, $ingredients, $duration, $imgURL);
+
+        if ($stmt->execute())
+        {
+            echo 'recipe added';
+        } else { echo 'erreur';}
+    }
 
     $mysqli->close();
+
 
     //exit();
 ?>

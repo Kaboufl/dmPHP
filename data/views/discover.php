@@ -33,6 +33,7 @@ $mysqli->close();
                 <tr>
                     <th>Nom</th>
                     <th>Description</th>
+                    <th>Catégorie</th>
                     <th>Durée</th>
                     <th>Difficulté</th>
                 </tr>
@@ -49,7 +50,8 @@ $mysqli->close();
         $nom = $recette['name'];
         $desc = $recette['description'];
         $duration = intval($recette['duration']) / 60 . ' min';
-        $difficulty = intval($recette['category_id']);
+        $difficulty = intval($recette['difficulty']);
+        $category = $recette['category'];
 
 
 
@@ -58,8 +60,9 @@ $mysqli->close();
             <tr onclick="window.location=\'/recipes/',$id,'\';">
                 <td>',$nom,'</td>
                 <td>',$desc,'</td>
+                <td>',$category,'</td>
                 <td>',$duration,'</td>
-                <td>',$difficulty,'</td>
+                <td>',$difficulty,'/5</td>
             </tr>
         ';
     }

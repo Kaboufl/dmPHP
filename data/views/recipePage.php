@@ -27,6 +27,7 @@
             <div>
                 <h1><?php echo $recette['name'] ?></h1>
                 <h3><?php echo $recette['description'] ?></h3>
+                <h3><?php echo $recette['category'] ?></h3>
             </div>
             <div>
                 <span>Temps de préparation :</span>
@@ -40,10 +41,10 @@
                 <ul>
                     <?php 
 
-$ingredients = explode("|", $recette['ingredients']);
+                        $ingredients = explode("|", $recette['ingredients']);
 
-foreach($ingredients as $ingredient)
-{
+                        foreach($ingredients as $ingredient)
+                        {
                             echo '<li>',$ingredient,'</li>';
                         }
                         ?>
@@ -55,13 +56,13 @@ foreach($ingredients as $ingredient)
                     <ul>
                         <?php 
 
-$etapes = explode("|", $recette['steps']);
+                        $etapes = explode("|", $recette['steps']);
 
-foreach($etapes as $etape)
-{
-    echo '<li>',$etape,'</li>';
-}
-?>
+                        foreach($etapes as $etape)
+                        {
+                            echo '<li>',$etape,'</li>';
+                        }
+                        ?>
                 </ul>
                 
                 
@@ -71,11 +72,6 @@ foreach($etapes as $etape)
     </div>
     <div class="comments-body">
         <h1>Commentaires</h1>
-
-        <div class="comment-item">
-            <h3>Auteur</h3>
-            <p>Message du commentaire</p>
-        </div>
         
         <?php 
             foreach($comments as $comment)
@@ -86,9 +82,9 @@ foreach($etapes as $etape)
                 $username = $mysqli->query("SELECT username FROM `db-MamaMia`.users WHERE id=".$id_user)->fetch_assoc();
                 echo '
                     <div class="comment-item">
-                        <h3>'.$username['username'].'</h3>
-                        <p>'.$content.'</p>
-                    </div>';
+                        <h3>'.$username['username']."</h3>
+                        <p>".stripcslashes($content)."</p>
+                    </div>";
             }
 
             $mysqli->close();
@@ -103,11 +99,15 @@ foreach($etapes as $etape)
                 echo '
                 <form class="add-comment" method="POST" action="/post-comment">
                     <h3>Publiez votre commentaire en tant que : '.$username.'</h3>
+
+                    <div>
+                        <textarea name="comment_body" id="" cols="70" rows="5"></textarea>
+                        <button type="submit">Envoyer</button>
+                    </div>
     
-                    <textarea name="comment_body" id="" cols="70" rows="5"></textarea>
+
                     <input type="hidden" value="'.$id_recette.'" name="recipe_id">
     
-                    <button type="submit">Envoyer</button>
                 </form>';
             } else {
                 echo '

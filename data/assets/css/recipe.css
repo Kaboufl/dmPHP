@@ -152,11 +152,53 @@
 {
     margin: 0;
     margin-left: 0.5rem;
-
+    color: var(--rouge-logo);
 }
 
 .add-comment
 {
-    padding: 1.25rem;
-}
+    padding: 1.85rem;
+    padding-left: 2.465rem;
 
+    background-color: var(--bg);
+    border-radius: 1.5rem;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+.add-comment > div 
+{
+    position: relative;
+    height: fit-content;
+    width: 100%;
+    font-family: 'Raleway';
+}
+.add-comment > div > textarea
+{
+    font-family: 'Raleway';
+    
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    
+    padding: 0.7rem;
+    border-radius: 0.4rem;
+    
+}
+.add-comment > div > button
+{
+    position: absolute;
+    bottom: 0.85rem;
+    right: 0.85rem;
+
+    padding: 0.5rem;
+    border-radius: 1rem;
+    border: 0;
+    color: var(--gris);
+    background-color: var(--rouge-logo);
+    font-family: 'Raleway';
+    font-weight: bold;
+
+
+}
