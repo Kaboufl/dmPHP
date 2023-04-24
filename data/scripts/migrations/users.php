@@ -6,6 +6,8 @@ $db = 'db-MamaMia';
 
 $mysqli = new mysqli($host, $user, $password, $db);
 
+$mysqli->query("DROP TABLE `db.MamaMia`.users");
+
 
 $table = $mysqli->query("CREATE TABLE `db-MamaMia`.`users` (
                                                     `id` INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
