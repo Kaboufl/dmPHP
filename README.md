@@ -15,3 +15,6 @@ Le serveur de développement local tourne avec Docker avec un conteneur PHP, Ngi
 #### Démarrage :
 Se rendre à la racine / du projet et taper la commande :
 > ``docker-compose up -d --build``
+
+Pour peupler la base de données exécuter la commande suivante dans le conteneur php :
+> ``php scripts/createSeed_schema.php``
